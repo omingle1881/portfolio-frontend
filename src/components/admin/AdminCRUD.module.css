@@ -1,0 +1,48 @@
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 1.75rem; gap: 1rem; flex-wrap: wrap;
+}
+.title  { font-family: var(--font-display); font-size: 1.75rem; color: var(--text-1); }
+.count  { color: var(--text-3); font-size: 0.85rem; margin-top: 0.2rem; }
+
+/* ── Modal ── */
+.overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center; padding: 1.5rem;
+}
+.modal {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); width: 100%; max-width: 600px;
+  max-height: 90vh; overflow-y: auto;
+  animation: fadeInUp 0.25s ease both;
+  box-shadow: var(--shadow-lg);
+}
+.modalHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 1.75rem; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; background: var(--surface); z-index: 1;
+}
+.modalTitle { font-family: var(--font-display); font-size: 1.2rem; color: var(--text-1); }
+.closeBtn   { color: var(--text-2); transition: color 0.2s; padding: 0.25rem; }
+.closeBtn:hover { color: var(--text-1); }
+
+/* ── Table ── */
+.tableWrap  { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.table      { width: 100%; border-collapse: collapse; }
+.table th   {
+  text-align: left; padding: 1rem 1.25rem;
+  background: var(--surface); color: var(--text-2);
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border);
+}
+.table td   {
+  padding: 1rem 1.25rem; color: var(--text-1);
+  border-bottom: 1px solid var(--border); font-size: 0.9rem;
+  max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.02); }
+
+.actions { display: flex; gap: 0.5rem; }
+.empty   { text-align: center; padding: 4rem; color: var(--text-3); }

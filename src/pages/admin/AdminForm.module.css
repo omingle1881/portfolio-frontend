@@ -1,0 +1,15 @@
+.form { padding: 1.75rem; display: flex; flex-direction: column; gap: 0; }
+.row  { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.checkRow { margin-bottom: 1.25rem; }
+.checkLabel {
+  display: flex; align-items: center; gap: 0.75rem;
+  cursor: pointer; color: var(--text-2); font-size: 0.9rem;
+}
+.checkLabel input[type="checkbox"] {
+  width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer;
+}
+.formActions {
+  display: flex; justify-content: flex-end; gap: 0.75rem;
+  padding-top: 1rem; border-top: 1px solid var(--border); margin-top: 0.5rem;
+}
+@media (max-width: 500px) { .row { grid-template-columns: 1fr; } }

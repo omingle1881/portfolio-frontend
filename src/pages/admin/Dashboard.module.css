@@ -1,0 +1,31 @@
+.header { margin-bottom: 2rem; }
+.title    { font-family: var(--font-display); font-size: 1.75rem; color: var(--text-1); }
+.subtitle { color: var(--text-2); margin-top: 0.25rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem; margin-bottom: 2.5rem;
+}
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+  transition: all 0.2s; position: relative; overflow: hidden;
+}
+.card:hover { border-color: rgba(108,99,255,0.3); transform: translateY(-3px); box-shadow: var(--glow); }
+.cardIcon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cardValue { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--text-1); line-height: 1; }
+.cardLabel { font-size: 0.8rem; color: var(--text-2); margin-top: 0.25rem; font-weight: 500; }
+.badge {
+  position: absolute; top: 0.75rem; right: 0.75rem;
+  background: #ef4444; color: #fff; font-size: 0.7rem; font-weight: 700;
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.quickLinks { }
+.qlTitle { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-1); }
+.qlGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.qlCard { cursor: pointer; }
+.qlCard:hover { border-color: rgba(108,99,255,0.3); }
+.qlLabel { font-family: var(--font-display); font-weight: 700; color: var(--accent-2); margin-bottom: 0.25rem; }
+.qlDesc  { font-size: 0.85rem; color: var(--text-2); }
