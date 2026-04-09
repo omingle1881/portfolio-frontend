@@ -75,12 +75,10 @@ export default function HomePage() {
             </div>
 
             <div className={styles.heroPhoto}>
-              {profile?.profileImageUrl
-                ? <img src={profile.profileImageUrl} alt={profile.name} className={styles.photo}/>
-                : <div className={styles.photoPlaceholder}>
-                    <span>{(profile?.name || 'O')[0]}</span>
-                  </div>
-              }
+              <img src={profile?.profileImageUrl || '/profile.png'}
+                   alt={profile?.name || 'Profile Photo'}
+                 className={styles.photo}
+              />
               <div className={styles.photoRing}/>
               {/* <div className={styles.floatCard1}><Linkedin size={16}/> Open to work</div>
               <div className={styles.floatCard2}><span className={styles.dot}/>Available now</div> */}
